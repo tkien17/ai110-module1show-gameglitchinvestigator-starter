@@ -25,13 +25,18 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [] Describe the game's purpose.
+  - A number guessing game where you try to find the secret number using higher/lower hints.
+- [] Detail which bugs you found.
+  - Hints were reversed (too-high said “go higher”, too-low said “go lower”).
+  - New game didn’t reset score/history/status, so old state carried over.
+- [] Explain what fixes you applied.
+  - Fixed hint logic, moved core logic into `logic_utils.py`, added tests, and added a reset function for new games.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [![alt text](image.png)] [Insert a screenshot of your fixed, winning game here]
+
 
 ## 🚀 Stretch Features
 

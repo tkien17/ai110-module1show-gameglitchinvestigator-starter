@@ -70,16 +70,14 @@ Ans: I ran test_guess_messages_are_correct() and test_reset_game_state_resets_se
 Ans: AI helped me to designed the 2 aforementioned tests
 ---
 
-## 4. What did you learn about Streamlit and state?
-- In your own words, explain why the secret number kept changing in the original app.
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-- What change did you make that finally gave the game a stable secret number?
+  ## 4. What did you learn about Streamlit and state?
+- The secret number kept changing because it was regenerated on every button click (rerun) instead of being stored in session state once at game start.
+- Streamlit reruns the entire script on every user interaction, like button clicks, to update the UI; session state is a dictionary that persists data across these reruns, so variables like the secret stay the same unless you change them.
+- I stored the secret in `st.session_state.secret` and initialized it only if not present, using the difficulty range, so it stays stable across guesses.
 
 ---
 
 ## 5. Looking ahead: your developer habits
-
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+- Writing unit tests with pytest and running them after changes to catch regressions.
+- Ask AI for more specific code examples or explanations before implementing.
+- This project showed me AI-generated code often has subtle bugs, so I now test thoroughly and refactor for clarity.
