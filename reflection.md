@@ -48,7 +48,7 @@ malfunction.
 
 
 ## 2. How did you use AI as a teammate?
-- I used github copilot for this projecidet to ntify where does the bug I realize come from and explain how does the "except TypeError:" part in check_guess work
+- I used github copilot for this project to identify where does the bug I realize come from and explain how does the "except TypeError:" part in check_guess work
 - AI suggested me the code to reset the history, score, and status after hitting the new_game button 
 - Luckily, all the suggestions AI gave me are all correct, so I don't have to deny any of them. 
 
