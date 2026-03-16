@@ -14,7 +14,6 @@ secret was 92, but the game said "Go LOWER." I then guessed 95 and it said
 `if guess > secret: return "Too High", "📈 Go HIGHER!"` — "Too High" should
 map to "Go LOWER", not "Go HIGHER."
 
----
 
 ### Bug 2: New Game Does Not Reset Score or History 
 **Expected:** Clicking "New Game" should reset everything (score back to 0),
@@ -26,7 +25,6 @@ carrying over guesses from the previous round. This is because the New Game
 handler only resets `attempts` and `secret`, not `score`, `history`,
 or `status`.
 
----
 
 ### Bug 3: Attempts Counter Starts at 1, Not 0 (Initialization Bug)
 **Expected:** At the start of the game, attempts used should be 0,
@@ -36,7 +34,6 @@ and "Attempts left" should show the full limit (e.g., 8 for Normal).
 instead of `0`, so the player immediately loses one attempt before making
 any guess. The "Attempts left" display is off by one from the very beginning.
 
----
 
 ### Bug 4: Secret Converted to String on Even Attempts (Type Bug)
 **Expected:** Every guess should be compared consistently against the integer
@@ -49,7 +46,6 @@ which breaks the win condition — guessing the correct number on an even
 attempt would not register as a win correctly, and hint logic would also
 malfunction.
 
----
 
 ## 2. How did you use AI as a teammate?
 - I used github copilot for this projecidet to ntify where does the bug I realize come from and explain how does the "except TypeError:" part in check_guess work
